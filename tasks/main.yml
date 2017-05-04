@@ -1,0 +1,16 @@
+
+    - name: Download .deb
+      get_url: url={{ item.url }} dest=/tmp/{{ item.name }}
+      tags:
+      - vagrant
+      - run
+      become: yes
+      with_items: "{{ installs }}"
+
+    - name: Install .deb
+      apt: deb=/tmp/{{ item.name }}
+      tags:
+      - vagrant
+      - run
+      become: yes
+      with_items: "{{ installs }}"

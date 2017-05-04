@@ -1,0 +1,3 @@
+  installs:
+    - {url: "http://download.virtualbox.org/virtualbox/5.1.22/virtualbox-5.1_5.1.22-115126~Ubuntu~trusty_amd64.deb", name: virtualbox-5.1_5.1.22-115126~Ubuntu~trusty_amd64.deb}
+    - {url: "https://releases.hashicorp.com/vagrant/1.9.3/vagrant_1.9.3_x86_64.deb", name: vagrant_1.9.3_x86_64.deb}
