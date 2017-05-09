@@ -6,6 +6,10 @@
       - run
       become: yes
       with_items: "{{ installs }}"
+      register: get_url_result
+      until: get_url_result | succeeded
+      retries: 3
+      delay: 1
 
     - name: Install .deb
       apt: deb=/tmp/{{ item.name }}
